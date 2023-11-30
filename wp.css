@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+*{
+  font-family: 'Nunito', sans-serif;
+  margin:0; padding:0;
+  box-sizing:border-box;
+  outline:none;
+  border:none;
+  text-transform:capitalize;
+  transition: .2s linear;
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /*scroll-padding-top: 7rem;*/
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+  width:1rem
+}
+html::-webkit-scrollbar-track{
+  background: #222
+}
+html::-webkit-scrollbar-thumb{
+  background:#f5f3cd;
+  border-radius: 5rem;
+}
+body {
+    background-color: #444;
+}
+section{
+  padding: 2rem 9%;
+}
+.header{
+  position: fixed;
+  top:0;left:0;right:0;
+  z-index:1000;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:1.5rem 9%;
+} 
+.header .logo{
+  font-weight: bolder;
+  color: aliceblue;
+  font-size: 2.6rem;
+}
+.header .logo span{
+  color:rgb(254, 159, 240);
+}
+.header .navbar a{
+  font-size: 2rem;
+  color: azure;
+  margin-right: 2rem;
+}
+.header .navbar a:hover{
+  color:aqua
+}
+img {
+  margin-right: 10px; /* Adjust the value to set the desired gap */
+}
+.column {
+  margin-left: 130px; /* Adjust the margin as needed */
+}
+#loginBody{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+  background: url("background.jpg");
+  background-repeat: cover;
+  background-position: center;
+}
+.login-form{
+  width: 420px;
+  background-color: transparent;
+  border: 2.5px solid rgba(225,225,225,.2);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 10px rgba(255, 254, 254, 0.2);
+  color: #fffdfd;
+  border-radius: 17px;
+  padding: 30px 40px;
+}
+.login-form h1{
+  font-size: 40px;
+  text-align: center;
+}
+.login-form .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border: 1.5px solid rgb(255, 253, 253);
+  border-radius: 25px;
+  padding: 20px 45px 20px 20px;
+}
+.input-box input#username {
+  color: #fff; 
+}
+.input-box input#password {
+  color: #fff;
+}
+.input-box input#username:valid {
+  color: #fff;
+}
+.input-box input::placeholder{
+  color: aliceblue;
+}
+.input-box i{
+  position:absolute;
+  right: 7px;
+  top: 30%;
+  transform: translate(-55%);
+  font-size: 20px;
+}
+.login-form .remember-forgot{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+.remember-forgot label input{
+  accent-color: #fff ;
+  margin-right: 3px;
+}
+.remember-forgot a{
+  color: #fff;
+  text-decoration: none;
+}
+.remember-forgot a:hover{
+  text-decoration: underline;
+}
+.login-form .btn{
+  width:100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #0c0c0c;
+  font-family: 600;
+}
+.login-form .register-link{
+  font-size: 14.5px;
+  text-align: center ;
+  margin: 20px 0 15px;
+}
+.register-link p a{
+  color: #fffdfd;
+  text-decoration: none ;
+  font-weight: 600;
+}
+.register-link p a:hover{
+  text-decoration: underline ;
+}
+
+/* Add your existing CSS styles before the home section styles */
+
+#homeSection {
+  padding: 40px; /* Padding around the content */
+  text-align: center; /* Center align text */
+  color: #f8f0f0; /* Text color */
+}
+#homeSection h1 {
+  font-size: 3.5rem; 
+  margin-bottom: 20px;
+}
+
+#homeSection span {
+  color: #ff9fcf; 
+  font-weight: bold; 
+}
+
+/* Add more styles as needed */
+
+/* Your existing CSS styles can go here */
+
+
