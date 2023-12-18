@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElegantVibes</title>
+    <link rel="stylesheet" href="wp.css">
+    <script src="wp.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div id="loginBody">
+        <div class="login-form">
+            <form action="">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" id="username" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    
+                </div>
+                <button type="submit" class="btn" onclick="login()" id="loginButton">Login</button>
+                
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const loginBody = document.querySelector('#loginBody');
+        const loginForm = document.querySelector('.login-form');
+        const logoutButton = document.querySelector('#logoutButton');
+        document.body.addEventListener('click', function (event) {
+            if (event.target.id === 'loginButton') {
+                const username = document.querySelector('#username').value;
+                const password = document.querySelector('#password').value;
+
+                if (authenticate(username, password)) {
+                    login();
+                } else {
+                    displayErrorMessage('Invalid username or password. Please try again.');
+                }
+            }
+        });
+        function authenticate(username, password) {
+        return username === '' && password === '';
+        }
+
+        function login() {
+            window.location.href = "index.html";
+        }
+        function displayErrorMessage(message) {
+            alert(message);
+        }
+
+    </script>
+</body>
+</html>

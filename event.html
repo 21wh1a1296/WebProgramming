@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Page - ElegantVibes</title>
+    <link rel="stylesheet" href="wp.css">
+    <script src="wp.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #444;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+        .events-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .event-button {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            overflow: hidden;
+            border: none;
+            background: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .event-button:hover {
+            transform: scale(1.1);
+        }
+        .event-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .event-text {
+            padding: 10px;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        .sub-images {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+        .sub-images img {
+            width: 300px;
+            height: 300px;
+        }
+        .sub-images button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <br><br><br><br><br><br>
+    <div class="event">
+        <header class="header">
+            <a href="#" class="logo"><span>Elegant</span> Vibes</a>
+            <nav class="navbar">
+                <a href="index.html" id="homeButton">Home</a>
+                <a href="event.html" id="eventButton">Event</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+                
+            </nav>
+        </header>   
+    </div>
+    <div class="events-container">
+        <button class="event-button" onclick="showSubImages('wedding')">
+            <img src="wedding1.png" alt="Event 1">
+        </button>
+
+        <button class="event-button" onclick="showSubImages('festival')">
+            <img src="festival1.png" alt="Event 2">
+        </button>
+
+        <button class="event-button" onclick="showSubImages('exhibition')">
+            <img src="exhibition1.png" alt="Event 2">
+        </button>
+        <br>
+        <button class="event-button" onclick="showSubImages('concert')">
+            <img src="concert1.png" alt="Event 2">
+        </button>
+
+        <button class="event-button" onclick="showSubImages('birthday')">
+            <img src="birthday1.png" alt="Event 2">
+        </button>
+
+        <button class="event-button" onclick="showSubImages('themed')">
+            <img src="halloween1.png" width="300" height="300" alt="Event 2">
+        </button>
+    </div>
+
+    <div class="sub-images" id="wedding">
+        <img src="marriage.jpg" alt="Event 1 Image 1">
+        <img src="haldi.jpg" alt="Event 1 Image 2">
+        <img src="mehandhi.jpg" alt="Event 1 Image 3">
+        <img src="destination wedding.jpg" alt="Event 1 Image 4">
+        <button onclick="hideSubImages()">Close</button>
+    </div>
+
+    <div class="sub-images" id="festival">
+        <img src="festival2.jpg" alt="Event 2 Image 1">
+        <img src="festival3.jpg" alt="Event 2 Image 2">
+        <img src="festival4.jpg" alt="Event 2 Image 3">
+        <button onclick="hideSubImages()">Close</button>
+    </div>
+
+    <div class="sub-images" id="exhibition">
+        <img src="exhibition2.jpg" alt="Event 3 Image 1">
+        <img src="exhibition3.jpeg" alt="Event 3 Image 2">
+        <img src="exhibition1.webp" alt="Event 3 Image 3">
+        <button onclick="hideSubImages()">Close</button>
+    </div>
+
+    <div class="sub-images" id="concert">
+        <img src="concert2.jpg" alt="Event 4 Image 1">
+        <img src="concert3.jpg" alt="Event 4 Image 2">
+        <img src="concert4.jpg" alt="Event 4 Image 3">
+        <button onclick="hideSubImages()">Close</button>
+    </div>
+
+    <div class="sub-images" id="birthday">
+        <img src="birthday2.jpg" alt="Event 5 Image 1">
+        <img src="birthday2.webp" alt="Event 5 Image 2">
+        <img src="birthday3.jpg" alt="Event 5 Image 3">
+        <button onclick="hideSubImages()">Close</button>
+    </div>
+
+    <div class="sub-images" id="themed">
+        <img src="retro.jpg" alt="Event 6 Image 1">
+        <img src="k-pop.jpg" alt="Event 6 Image 2">
+        <img src="theme.jpeg" alt="Event 6 Image 3">
+        <!-- Add more sub-images for Event 2 as needed -->
+        <button onclick="hideSubImages()">Close</button>
+    </div>
+
+    <script>
+        function showSubImages(eventId) {
+            document.getElementById(eventId).style.display = 'flex';
+        }
+
+        function hideSubImages() {
+            var subImages = document.getElementsByClassName('sub-images');
+            for (var i = 0; i < subImages.length; i++) {
+                subImages[i].style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
